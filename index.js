@@ -1,7 +1,7 @@
 let valor = Number(prompt ('Digite o valor do produto:'))
 console.log(typeof(valor))
 
-if (valor >= 250.000 ){
+if (valor >= 250){
     document.getElementById('Resultado').innerHTML = 'Aprovado'
 }
 
