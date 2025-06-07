@@ -4,11 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desafio 2</title>
+
+    <style>
+        /* Define a fonte padrão para a página e um fundo suave */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estiliza o contêiner principal */
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        /* Estiliza o título principal */
+        h1 {
+            color: #1c1e21;
+            font-size: 2.5rem; /* 40px */
+            margin-bottom: 1rem; /* 16px */
+        }
+
+        /* Estiliza o subtítulo */
+        h2 {
+            color: #606770;
+            font-size: 1.25rem; /* 20px */
+            font-weight: 400;
+        }
+
+        /* Estilo base para o resultado */
+        #Resultado {
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease; /* Animação suave */
+        }
+
+        /* Estilo dinâmico que será aplicado pelo JavaScript */
+        .aprovado {
+            background-color: #e7f3ff;
+            color: #1877f2; /* Azul */
+        }
+
+        .nao-aprovado {
+            background-color: #ffebe8;
+            color: #d93025; /* Vermelho */
+        }
+    </style>
 </head>
 <body>
-        <h1> Desafio 2 </h1>
-        <h2> Resultado: <span id= 'Resultado'></span></h2>
-        <script src='index.js'></script>
+    
+    <div class="container">
+        <h1>Desafio 2</h1>
+        <h2>Resultado: <span id="Resultado"></span></h2>
+    </div>
+    
+    <script>
+        let valor = Number(prompt('Digite o valor do produto:'));
+        const resultadoSpan = document.getElementById('Resultado');
+
+        if (valor >= 250) {
+            resultadoSpan.innerHTML = 'Aprovado';
+            resultadoSpan.className = 'aprovado'; // Adiciona a classe CSS
+        } else {
+            resultadoSpan.innerHTML = 'Não aprovado';
+            resultadoSpan.className = 'nao-aprovado'; // Adiciona a classe CSS
+        }
+
+        // O restante do seu código JS...
+    </script>
+
+</body>
+</html>
 </body>
 </html>
